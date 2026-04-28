@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Data — too large, contains snapshots
+data/raw/*.csv
+data/cg_coin_details/
+data/cg_coins_list.json
+data/results/*.png
+data/results/*.csv
+data/*/
+
+# Logs
+logs/
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Secrets / env
+.env
+.token_survival.env
+*.pgpass
+
+# Scratch
+scratch/
+tmp/
+*.tmp
+
+# Compiled outputs
+*.pdf
+!paper/*.pdf
+
+# OS
+Thumbs.db
