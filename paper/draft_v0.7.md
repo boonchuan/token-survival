@@ -161,6 +161,8 @@ The unconditional mortality rate is between 53% and 67% across the four definiti
 
 Figure 1 plots the Kaplan-Meier survival function under the primary definition, with 95% confidence band. Headline survival probabilities at 1, 3, and 5 years from listing are presented in Table 2, alongside the same statistics under the three robustness variants:
 
+![Figure 1. Pooled Kaplan-Meier survival function, primary definition.](figures/km_pooled_primary.png)
+
 | Definition  | S(1y)  | S(3y)  | S(5y)  |
 |-------------|--------|--------|--------|
 | primary     | 67.9%  | 30.2%  | 17.0%  |
@@ -173,6 +175,8 @@ Five years is the most natural benchmark horizon. **Five-year survival is 17.0% 
 ### 5.3 Heterogeneity by cohort
 
 Figure 2 plots survival functions stratified by cohort half-year. The log-rank test for cohort effects rejects equality at p < 10^-176, an enormous test statistic that reflects the sample size and the degree of separation between cohorts.
+
+![Figure 2. Kaplan-Meier survival functions by cohort half-year, primary definition. Eight largest cohorts shown.](figures/km_by_cohort_half_primary.png)
 
 The cohort-by-cohort table (Table 3) is the paper's most striking finding:
 
@@ -222,6 +226,8 @@ Table 4 reports the proportion of tokens dead under the primary definition by ch
 Tokens whose chain CG could not assign (`unknown`) have 75% mortality, reflecting the strong selection effect: if a token is not in CG's index, it is disproportionately likely to be dead or never to have traded meaningfully. Among tokens with a confidently-assigned chain, **Ethereum-deployed tokens have the lowest mortality (42.0%)**, followed by native L1 coins (42.1%), and tokens on Tron (37.7%, dominated by stablecoin issuance via TRC-20). Tokens deployed on Solana (49.0%) and Binance Smart Chain (47.7%) — the chains most associated with the 2021 memecoin and high-throughput DEX boom — exhibit roughly 7 percentage points higher mortality than Ethereum.
 
 Figure 3 reveals two structural patterns not visible in the cumulative table. First, **native L1 coins (n=556) are dramatically the best long-run survivors**, plateauing near 36% survival at 11 years against under 15% for any smart-contract platform. This is partly mechanical: a chain's own coin cannot be delisted from CMC because the chain anchors the listing, and chains themselves have higher persistence than the dApps they host. Second, **Ethereum's higher survival relative to Solana and BSC is concentrated in the early years** (days 0–1500); the curves converge somewhat in the long tail, reaching similar 8-year levels in the 8–15% range. We do not interpret this gap causally — chain-of-deployment is correlated with launch-time liquidity, deployment cost, and project type, all of which independently affect survival.
+
+![Figure 3. Kaplan-Meier survival functions by chain assignment, primary definition.](figures/km_by_chain_primary.png)
 
 The log-rank test for chain effects is highly significant (p effectively zero at machine precision).
 
